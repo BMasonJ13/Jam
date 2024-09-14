@@ -20,6 +20,8 @@ public class BlinkingLights : MonoBehaviour
     private float timer;
     private bool goingUp = true;
 
+    private float delay;
+
     private new Light2D light;
 
     private void Start()
@@ -27,6 +29,9 @@ public class BlinkingLights : MonoBehaviour
         light = GetComponent<Light2D>();
         timer = timeBetweenFade;
         currentTarget = maxFalloff;
+
+        delay = Random.Range(0.1f, .3f);
+        timer += delay;
     }
 
     private void Update()
@@ -44,7 +49,7 @@ public class BlinkingLights : MonoBehaviour
                 {
                     goingUp = !goingUp;
                     currentTarget = goingUp ? maxFalloff : minFalloff;
-                    timer = timeBetweenFade;
+                    timer = timeBetweenFade + delay;
                 }
             }
         }
