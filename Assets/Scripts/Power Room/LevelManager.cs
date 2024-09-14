@@ -1,13 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class LevelManager : MonoBehaviour
 {
     private bool[,] generators = new bool[3,3];
 
+    private bool[,] genMatchA = { {true, true, false }, { true, true, false }, { true, true, true } };
+
     [SerializeField]
     private Generator[] gens;
+
+    [SerializeField]
+    private Light2D[] alertLights;
+
+    private bool isComplete = false;
+
+    [SerializeField]
+    private Light2D light;
 
     public void UpdateGenStatus(int x, int y)
     {
@@ -39,6 +50,38 @@ public class LevelManager : MonoBehaviour
                 gens[count++].Toggle(generators[i, j]);
             }
         }
+
+        if (checkCorrect())
+        {
+            isComplete = true;
+            foreach(Light2D l in alertLights)
+            {
+                l.GetComponent<BlinkingLights>().enabled = false;
+                l.enabled = false;
+            }
+        }
+
     }
 
+    private void Update()
+    {
+        if (isComplete)
+        {
+            light.intensity = Mathf.Lerp(light.intensity, 0.8f, 5 * Time.deltaTime);
+        }
+    }
+
+    public bool checkCorrect()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 3; j++)
+            {
+                if (generators[i, j] != genMatchA[i, j])
+                    return false;
+            }
+        }
+
+        return true;
+    }
 }
