@@ -10,22 +10,29 @@ public class Movement : MonoBehaviour
     float vertical;
     Animator animator;
     SpriteRenderer spriteRenderer;
+    Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
     }
-
-    // Update is called once per frame
     void Update()
     {
-        horizontal = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
-        vertical = Input.GetAxis("Vertical") * Time.deltaTime * speed;
+        horizontal = Input.GetAxis("Horizontal") * speed;
+        vertical = Input.GetAxis("Vertical") * speed;
 
-        transform.position += new Vector3(horizontal, vertical);
+
         HandleAnimations();
     }
+
+    private void FixedUpdate()
+    {
+        rb.velocity = new Vector2(horizontal, vertical);
+    }
+
+    
 
     private void HandleAnimations()
     {
