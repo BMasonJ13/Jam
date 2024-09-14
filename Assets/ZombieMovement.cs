@@ -7,7 +7,7 @@ public class ZombieMovement : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] Animator animator;
     [SerializeField] Rigidbody2D rb;
-    [SerializeField] Vector2 direction;
+    public Vector2 direction;
     // Start is called before the first frame update
     void Start()
     {
