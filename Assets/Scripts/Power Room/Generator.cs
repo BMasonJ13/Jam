@@ -23,6 +23,11 @@ public class Generator : MonoBehaviour, IInteractable
         manager.UpdateGenStatus(matrixPosition.x, matrixPosition.y);
     }
 
+    public string GetActionText()
+    {
+        return "Press 'Space' to toggle generator.";
+    }
+
     public void Toggle(bool b)
     {
         blinking.enabled = b;
