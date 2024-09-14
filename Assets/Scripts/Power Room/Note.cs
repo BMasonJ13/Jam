@@ -15,4 +15,9 @@ public class Note : MonoBehaviour, IInteractable
     {
         renderer.sprite = noteToShow;
     }
+
+    public string GetActionText()
+    {
+        return "Press 'space' to read note.";
+    }
 }
