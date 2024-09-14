@@ -5,23 +5,23 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     [SerializeField] float speed;
-
+    [SerializeField] Animator animator;
+    [SerializeField] SpriteRenderer spriteRenderer;
     float horizontal;
     float vertical;
-    Animator animator;
-    SpriteRenderer spriteRenderer;
+    
     Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        animator = GetComponent<Animator>();
+        
+        
     }
     void Update()
     {
-        horizontal = Input.GetAxis("Horizontal") * speed;
-        vertical = Input.GetAxis("Vertical") * speed;
+        horizontal = Input.GetAxisRaw("Horizontal") * speed;
+        vertical = Input.GetAxisRaw("Vertical") * speed;
 
 
         HandleAnimations();
