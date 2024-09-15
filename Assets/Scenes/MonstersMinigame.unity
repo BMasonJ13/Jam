@@ -7819,7 +7819,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f703e4ab9f546bb4d9175d3311c3866b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trialDuration: 10
+  trialDuration: 60
   player: {fileID: 150256549}
   reloadIndex: 2
   timer: {fileID: 539708520}
