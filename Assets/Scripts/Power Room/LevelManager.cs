@@ -23,6 +23,14 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     private Dialogue dialog;
 
+    [SerializeField]
+    private new SpriteRenderer renderer;
+
+    [SerializeField]
+    private Camera gameCamera;
+    [SerializeField]
+    private Color cameraBackgroundAfter;
+
     private bool isComplete = false;
 
     [SerializeField]
@@ -65,6 +73,10 @@ public class LevelManager : MonoBehaviour
             levelEnder.SetActive(true);
             dialog.gameObject.SetActive(true);
             dialog.StartDialogueOnInteraction(dialogName);
+            renderer.gameObject.SetActive(false);
+
+            gameCamera.backgroundColor = cameraBackgroundAfter;
+
             foreach (Light2D l in alertLights)
             {
                 l.GetComponent<BlinkingLights>().enabled = false;
