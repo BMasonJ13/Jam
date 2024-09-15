@@ -23,6 +23,7 @@ public class SpawnSystem : MonoBehaviour
     {
         GameObject zombiePrefab = Instantiate(zombie, transform.position, Quaternion.identity);
         zombiePrefab.GetComponent<ZombieMovement>().direction = zombieMovingDir;
+        frecuency -= 1f;
     }
 
 

@@ -477,6 +477,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1272769486894363361, guid: a50d6c142a2e50a4e8db206db8c57008, type: 3}
   m_PrefabInstance: {fileID: 193588480}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &390384954
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 390384956}
+  - component: {fileID: 390384955}
+  m_Layer: 0
+  m_Name: SpawnSystem (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &390384955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390384954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb8c1aff2c734f34893b265bba4a1dfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombie: {fileID: 3953994253764200397, guid: e9a69a7404dd3d544846ff35be93766b, type: 3}
+  zombieMovingDir: {x: 1, y: 0}
+  frecuency: 10
+--- !u!4 &390384956
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390384954}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -17.56, y: 0.84048176, z: 0.061691727}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &460062501
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2836,6 +2883,53 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!1 &898202469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 898202471}
+  - component: {fileID: 898202470}
+  m_Layer: 0
+  m_Name: SpawnSystem (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &898202470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898202469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb8c1aff2c734f34893b265bba4a1dfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombie: {fileID: 3953994253764200397, guid: e9a69a7404dd3d544846ff35be93766b, type: 3}
+  zombieMovingDir: {x: -1, y: 0}
+  frecuency: 10
+--- !u!4 &898202471
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898202469}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.64, y: 0.84048176, z: 0.061691727}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &916685471
 GameObject:
   m_ObjectHideFlags: 0
@@ -2914,7 +3008,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombie: {fileID: 3953994253764200397, guid: e9a69a7404dd3d544846ff35be93766b, type: 3}
   zombieMovingDir: {x: 0, y: 1}
-  frecuency: 10
+  frecuency: 6
 --- !u!4 &919599099
 Transform:
   m_ObjectHideFlags: 0
@@ -3224,7 +3318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombie: {fileID: 3953994253764200397, guid: e9a69a7404dd3d544846ff35be93766b, type: 3}
   zombieMovingDir: {x: 0, y: -1}
-  frecuency: 10
+  frecuency: 15
 --- !u!4 &1639080152
 Transform:
   m_ObjectHideFlags: 0
@@ -6939,6 +7033,8 @@ SceneRoots:
   - {fileID: 150256552}
   - {fileID: 7974726432539322959}
   - {fileID: 916685473}
+  - {fileID: 898202471}
   - {fileID: 1639080152}
   - {fileID: 919599099}
   - {fileID: 1870349585}
+  - {fileID: 390384956}
