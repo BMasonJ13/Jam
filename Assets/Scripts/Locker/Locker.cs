@@ -24,6 +24,8 @@ public class Locker : MonoBehaviour, IInteractable
         top.sprite = topOpen;
         bottom.sprite = bottomOpen;
         controller.Activate(data);
+
+        Destroy(this);
     }
 
     public string GetActionText()
