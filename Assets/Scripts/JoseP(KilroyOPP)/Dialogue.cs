@@ -64,8 +64,7 @@ public class Dialogue : MonoBehaviour
 
     public void loadFullText()
     {
-        Debug.Log(contentIndex);
-        if (textComponent?.text == content[contentIndex].dialogueLines[index].ToString())
+        if (textComponent.text == content[contentIndex].dialogueLines[index].ToString())
         {
             NextLine();
         }
@@ -81,9 +80,9 @@ public class Dialogue : MonoBehaviour
         //contentIndex = Array.FindIndex(content, 0, 1, dialogueName);
         for (int i = 0; i < content.Length; i++)
         {
-            if (dialogueName == content[i].name)
-            {
 
+            if (dialogueName.Equals(content[i].name))
+            {
                 contentIndex = i; break;
             }
         }

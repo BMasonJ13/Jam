@@ -2362,7 +2362,7 @@ MonoBehaviour:
   noteToShow: {fileID: 21300000, guid: 7403787aec7904947ab5a2f6d709824b, type: 3}
   renderer: {fileID: 1546803139}
   dialogOnInteract: 1
-  dialogName: note
+  dialogName: PowerRoomNote
   dialog: {fileID: 1945671774}
 --- !u!61 &413364336
 BoxCollider2D:
@@ -5913,7 +5913,7 @@ MonoBehaviour:
   - {fileID: 725008656}
   - {fileID: 112360432}
   levelEnder: {fileID: 1649102985}
-  dialogName: complete
+  dialogName: PowerRoomComplete
   dialog: {fileID: 1945671774}
   light: {fileID: 929506544}
 --- !u!4 &754573329
