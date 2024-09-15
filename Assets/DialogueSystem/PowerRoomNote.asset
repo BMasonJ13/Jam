@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 345dd673525dab24d92bb3a33ce53a73, type: 3}
   m_Name: PowerRoomNote
   m_EditorClassIdentifier: 
-  dialogueName: 
-  dialogueLines: []
+  dialogueName: note
+  dialogueLines:
+  - 'Great you found the optimal sequence for power. Remember when you activate a
+    generator it will power other adjacent generators but not diagonally. '
   sprite: {fileID: 0}
   nextDialogue: 
   endOfSequence: 0

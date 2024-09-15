@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 345dd673525dab24d92bb3a33ce53a73, type: 3}
   m_Name: PowerRoomComplete
   m_EditorClassIdentifier: 
-  dialogueName: 
-  dialogueLines: []
+  dialogueName: complete
+  dialogueLines:
+  - Great Job getting the power back up and running! We still have much more to do
+    so get back to the main corridor!
   sprite: {fileID: 0}
   nextDialogue: 
   endOfSequence: 0
