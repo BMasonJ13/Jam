@@ -13039,6 +13039,57 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.9015083, y: 0.9780121}
   m_EdgeRadius: 0
+--- !u!1 &1945671773
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1945671775}
+  - component: {fileID: 1945671774}
+  m_Layer: 0
+  m_Name: DialogueSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1945671774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945671773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49b401065526b46418c91bb5419f73b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textGameObject: {fileID: 0}
+  content:
+  - {fileID: 11400000, guid: 79ed81431d20ac84a9e2eeff05b66e67, type: 2}
+  textSpeed: 0.1
+  textPauseSpeed: 0.3
+  playThisDialogue: 
+  pauses: 2e002c00
+--- !u!4 &1945671775
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945671773}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 494.43207, y: 278.45102, z: -9.086185}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1948108396
 GameObject:
   m_ObjectHideFlags: 0
@@ -13312,3 +13363,4 @@ SceneRoots:
   - {fileID: 488490374}
   - {fileID: 413364338}
   - {fileID: 1649102987}
+  - {fileID: 1945671775}

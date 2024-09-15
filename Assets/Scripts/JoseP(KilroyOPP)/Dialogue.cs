@@ -30,6 +30,11 @@ public class Dialogue : MonoBehaviour
         textGameObject.SetActive(false);
 
         textComponent = textGameObject.GetComponent<TextMeshProUGUI>();
+
+        if (!textComponent)
+        {
+            textComponent = textGameObject.GetComponentInChildren<TextMeshProUGUI>();
+        }
         
 
         textComponent.text = string.Empty;
@@ -59,7 +64,8 @@ public class Dialogue : MonoBehaviour
 
     public void loadFullText()
     {
-        if (textComponent.text == content[contentIndex].dialogueLines[index].ToString())
+        Debug.Log(contentIndex);
+        if (textComponent?.text == content[contentIndex].dialogueLines[index].ToString())
         {
             NextLine();
         }

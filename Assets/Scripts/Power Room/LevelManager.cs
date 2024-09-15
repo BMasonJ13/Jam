@@ -18,10 +18,15 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     private GameObject levelEnder;
 
+    [SerializeField]
+    private string dialogName;
+    [SerializeField]
+    private Dialogue dialog;
+
     private bool isComplete = false;
 
     [SerializeField]
-    private Light2D light;
+    private new Light2D light;
 
     public void UpdateGenStatus(int x, int y)
     {
@@ -57,7 +62,10 @@ public class LevelManager : MonoBehaviour
         if (checkCorrect())
         {
             isComplete = true;
-            foreach(Light2D l in alertLights)
+            levelEnder.SetActive(true);
+            dialog.gameObject.SetActive(true);
+            dialog.StartDialogueOnInteraction(dialogName);
+            foreach (Light2D l in alertLights)
             {
                 l.GetComponent<BlinkingLights>().enabled = false;
                 l.enabled = false;
@@ -71,7 +79,7 @@ public class LevelManager : MonoBehaviour
         if (isComplete)
         {
             light.intensity = Mathf.Lerp(light.intensity, 0.8f, 5 * Time.deltaTime);
-            levelEnder.SetActive(true);
+           
         }
     }
 
