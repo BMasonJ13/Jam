@@ -10,6 +10,7 @@ public class Dialogue : MonoBehaviour
 {
     
     [SerializeField] GameObject textGameObject;
+    [SerializeField] GameObject blackBoxGameObject;
     [SerializeField] DialogueContent[] content;
     [SerializeField] float textSpeed;
     [SerializeField] float textPauseSpeed;
@@ -23,8 +24,8 @@ public class Dialogue : MonoBehaviour
     Image imageComponent;
 
     private int index;
-   
 
+    public bool endOfDialogue;
     void Start()
     {
         textGameObject.SetActive(false);
@@ -57,6 +58,8 @@ public class Dialogue : MonoBehaviour
         {
             loadFullText();
         }
+        endOfDialogue = false;
+        blackBoxGameObject.SetActive(true);
         textGameObject.SetActive(true);
         SetNewDialogueContent(dialogueName);
         StartDialogue();
@@ -126,6 +129,8 @@ public class Dialogue : MonoBehaviour
         else
         {
             textGameObject.SetActive(false);
+            blackBoxGameObject.SetActive(false);
+            endOfDialogue = true;
         }
     }
 

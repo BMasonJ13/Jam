@@ -10,7 +10,7 @@ public class Movement : MonoBehaviour
     float horizontal;
     float vertical;
     
-    Rigidbody2D rb;
+    Rigidbody2D rb; 
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +36,7 @@ public class Movement : MonoBehaviour
 
     private void HandleAnimations()
     {
+        
         if (horizontal > 0)
         {
             animator.SetBool("WalkingRight", true);
@@ -55,5 +56,7 @@ public class Movement : MonoBehaviour
         animator.SetBool("WalkingDown", vertical < 0);
         animator.SetBool("Idle", vertical == 0 && horizontal == 0);
     }
+
+    
        
 }
