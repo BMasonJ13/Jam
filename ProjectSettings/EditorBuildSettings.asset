@@ -12,11 +12,17 @@ EditorBuildSettings:
     path: Assets/Scenes/MainLevel.unity
     guid: 9f0c53870bacc2a488c590c2a6a52890
   - enabled: 1
-    path: Assets/Scenes/PowerRoom.unity
-    guid: 1f0d9c0a184c641299fca6e7fb803ddd
+    path: Assets/Scenes/MainMenu.unity
+    guid: c987cc9248f443a4eb20ec9664845fa3
   - enabled: 1
     path: Assets/Scenes/MonstersMinigame.unity
     guid: 2ae9c18958b205148af3020d4311b67e
+  - enabled: 1
+    path: Assets/Scenes/PowerRoom.unity
+    guid: 1f0d9c0a184c641299fca6e7fb803ddd
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 9a44cca9a5da2814fac55d69b4c541eb
   - enabled: 1
     path: Assets/Scenes/SpaceShip.unity
     guid: b6e8b39ba8267d042bc5734209172bbd

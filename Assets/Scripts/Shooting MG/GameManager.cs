@@ -84,4 +84,9 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadSceneAsync(reloadIndex);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        
+    }
 }
