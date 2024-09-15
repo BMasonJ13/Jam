@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] Dialogue dialogue;
     [SerializeField] string sceneName;
+    [SerializeField] bool blockMovement;
     Movement movement;
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (dialogue.endOfDialogue)
+        if (dialogue.endOfDialogue || blockMovement)
         {
             movement.enabled = true;
         }
