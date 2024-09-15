@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aedd08c72432c45dfa0e44aec903529b, type: 3}
+  m_Name: Cigs
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 1466030774, guid: 1e0e849ef3ab7433684ecad8bcb4b50b, type: 3}
+  itemName: Old cigarettes
+  description: Banned in the early 2500's cigarettes had a booming underground market
+    for centuries.

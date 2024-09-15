@@ -24,6 +24,7 @@ public class SceneLoader : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if(collision.gameObject.name.Equals("Player"))
         SceneManager.LoadSceneAsync(levelIndex);
     }
 }

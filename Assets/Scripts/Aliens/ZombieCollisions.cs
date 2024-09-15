@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ZombieCollisions : MonoBehaviour
 {
     Health health;
-    // Start is called before the first frame update
+
     void Start()
     {
         health = GetComponent<Health>();
@@ -21,7 +22,7 @@ public class ZombieCollisions : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Destroy(collision.gameObject);
+            collision.gameObject.SetActive(false);
         }
         
     }
