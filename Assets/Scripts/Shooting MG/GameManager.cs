@@ -2,40 +2,86 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] Dialogue dialogue;
-    [SerializeField] string sceneName;
-    [SerializeField] bool blockMovement;
-    Movement movement;
-    // Start is called before the first frame update
-    void Start()
-    {
-        movement = GameObject.Find("Player").GetComponent<Movement>();
-        
-    }
 
-    // Update is called once per frame
+    [Header("Minigame Settings")]
+    [SerializeField]
+    private float trialDuration;
+    [SerializeField]
+    private GameObject player;
+    [SerializeField]
+    private int reloadIndex;
+
+    [Header("GUI")]
+    [SerializeField]
+    private TextMeshProUGUI timer;
+    [SerializeField]
+    private Image panel;
+
+    [Header("Completion Game Objects")]
+    [SerializeField]
+    private new Light2D light;
+    [SerializeField]
+    private GameObject[] spawners;
+    [SerializeField]
+    private GameObject levelLoader;
+
+
+
+    private bool isComplete;
+
     void Update()
     {
-        if (dialogue.endOfDialogue || blockMovement)
+      
+        HandleTimer();
+        CheckPlayerStatus();
+
+        if (isComplete)
         {
-            movement.enabled = true;
-        }
-        else
-        { 
-            movement.enabled = false;
+            light.intensity = Mathf.Lerp(light.intensity, 1.0f, 5 * Time.deltaTime);
+
         }
 
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void CheckPlayerStatus()
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (!player.activeInHierarchy)
         {
-            SceneManager.LoadScene(sceneName);
+            panel.gameObject.SetActive(true);
+            timer.gameObject.SetActive(false);
         }
+    }
+
+    private void HandleTimer()
+    {
+        trialDuration -= Time.deltaTime;
+
+        if(trialDuration <= 0)
+        {
+            isComplete = true;
+
+            levelLoader.SetActive(true);
+            timer.gameObject.SetActive(false);
+
+            foreach(GameObject g in spawners)
+            {
+                Destroy(g);
+            }
+
+        }
+
+        timer.text = "Time left: " + trialDuration.ToString("#.##");
+    }
+
+    public void ReloadLevel()
+    {
+        SceneManager.LoadSceneAsync(reloadIndex);
     }
 }
