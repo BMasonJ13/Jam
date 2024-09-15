@@ -6853,7 +6853,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 61c065c494c0446c6b8136b115c3569b, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.727
+  m_Volume: 0.188
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -14317,6 +14317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textGameObject: {fileID: 2042920670}
+  blackBoxGameObject: {fileID: 0}
   content:
   - {fileID: 11400000, guid: 82fe0cda4d763416191b70b68ee1fe88, type: 2}
   - {fileID: 11400000, guid: 4715ca6778ac144b18f919b0b9cd09ac, type: 2}
@@ -14325,6 +14326,7 @@ MonoBehaviour:
   textPauseSpeed: 0.3
   playThisDialogue: 
   pauses: 2e002c00
+  endOfDialogue: 0
 --- !u!4 &1945671775
 Transform:
   m_ObjectHideFlags: 0
