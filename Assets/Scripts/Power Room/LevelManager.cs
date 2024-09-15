@@ -36,6 +36,9 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     private new Light2D light;
 
+    [SerializeField]
+    private AudioSource alarm;
+
     public void UpdateGenStatus(int x, int y)
     {
 
@@ -74,7 +77,7 @@ public class LevelManager : MonoBehaviour
             dialog.gameObject.SetActive(true);
             dialog.StartDialogueOnInteraction(dialogName);
             renderer.gameObject.SetActive(false);
-
+            alarm.Stop();
             gameCamera.backgroundColor = cameraBackgroundAfter;
 
             foreach (Light2D l in alertLights)

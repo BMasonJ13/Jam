@@ -12,6 +12,9 @@ public class Locker : MonoBehaviour, IInteractable
     private Sprite topOpen;
     [SerializeField]
     private Sprite bottomOpen;
+    private AudioSource source;
+    [SerializeField]
+    private AudioClip clip;
 
     [SerializeField]
     private EasterEggData data;
@@ -19,12 +22,17 @@ public class Locker : MonoBehaviour, IInteractable
     [SerializeField]
     private FoundPanelController controller;
 
+    private void Start()
+    {
+        source = GetComponent<AudioSource>();
+    }
+
     public void Interact()
     {
         top.sprite = topOpen;
         bottom.sprite = bottomOpen;
         controller.Activate(data);
-
+        source.PlayOneShot(clip);
         Destroy(this);
     }
 
