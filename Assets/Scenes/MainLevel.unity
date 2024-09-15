@@ -15181,6 +15181,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: {fileID: 501432695}
+  sceneName: SpaceShip
+  blockMovement: 0
 --- !u!61 &1903162116
 BoxCollider2D:
   m_ObjectHideFlags: 0
