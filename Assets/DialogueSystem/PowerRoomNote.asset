@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: note
   dialogueLines:
-  - 'Great you found the optimal sequence for power. Remember when you activate a
-    generator it will power other adjacent generators but not diagonally. '
+  - Nice you found the power sequence. The black filled squares show which generators
+    should be on. Everytime you toggle a generator it will also toggle it's neighbors
+    up, down, left, and right.
   sprite: {fileID: 0}
   nextDialogue: 
   endOfSequence: 0

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
+[RequireComponent(typeof(AudioSource))]
 public class Generator : MonoBehaviour, IInteractable
 {
 
@@ -18,9 +19,20 @@ public class Generator : MonoBehaviour, IInteractable
     [SerializeField]
     private BlinkingLights blinking;
 
+    private AudioSource source;
+
+    [SerializeField]
+    private AudioClip clip;
+
+    private void Start()
+    {
+        source = GetComponent<AudioSource>();
+    }
+
     public void Interact()
     {
         manager.UpdateGenStatus(matrixPosition.x, matrixPosition.y);
+        source.PlayOneShot(clip);
     }
 
     public string GetActionText()
