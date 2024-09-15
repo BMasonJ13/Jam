@@ -15,6 +15,9 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     private Light2D[] alertLights;
 
+    [SerializeField]
+    private GameObject levelEnder;
+
     private bool isComplete = false;
 
     [SerializeField]
@@ -68,6 +71,7 @@ public class LevelManager : MonoBehaviour
         if (isComplete)
         {
             light.intensity = Mathf.Lerp(light.intensity, 0.8f, 5 * Time.deltaTime);
+            levelEnder.SetActive(true);
         }
     }
 
